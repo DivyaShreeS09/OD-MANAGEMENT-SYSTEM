@@ -6,25 +6,35 @@
   <title>Student OD Portal</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="dashboard-body">
-  <div class="dash-header">
-    <img src="assets/SIST logo.jpeg" class="dash-logo" alt="Sathyabama Logo" class="login-logo" style="width:420px;height:auto;" alt="Sathyabama Logo">
-    <h1>Student OD Portal</h1>
+<!-- TOP HEADER BAR -->
+<div class="top-header">
+  <div class="header-left">
+    <img src="assets/SIST logo.jpeg" class="dash-logo" alt="Sathyabama Logo">
   </div>
 
+  <div class="header-center">
+    <h1 class="page-title">STUDENT OD PORTAL</h1>
+  </div>
+
+  <div class="header-right">
+    <span class="logged-user">Logged in as: Anjali </span>
+    <button class="logout-btn" onclick="window.location.href='index.html'">Sign Out</button>
+  </div>
+</div>
+
   <div class="student-form">
-    <h2>Request On-Duty</h2>
+    <h2>REQUEST On-Duty</h2>
     <form id="odForm">
-      <input type="text" id="studentName" placeholder="Enter your name" required>
-      <input type="text" id="program" placeholder="Enter your Program (e.g. B.E AIML A2)" required>
-      <input type="text" id="registerNo" placeholder="Enter your Register No" required>
-      <input type="text" id="section" placeholder="Enter your Section (e.g. A2)" required>
+      <input type="text" id="registerNo" placeholder="Enter your Register Number" required>
+      <input type="text" id="studentName" placeholder="Enter your Name" required>
+      <input type="text" id="program" placeholder="Enter your Program (e.g. B.E CSE AIML)" required>
+      <input type="text" id="section" placeholder="Enter your Section (e.g. A1)" required>
       <input type="text" id="reason" placeholder="Reason / Event Details" required>
       <input type="date" id="fromDate" required>
       <input type="date" id="toDate" required>
       <input type="time" id="startTime" required>
       <input type="time" id="endTime" required>
-      <button type="submit" class="login-btn">Submit OD</button>
+      <button type="submit" class="login-btn">Request OD</button>
     </form>
   </div>
 

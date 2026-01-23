@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OD Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<!-- TOP HEADER BAR -->
+<div class="top-header">
+  <div class="header-left">
+    <img src="assets/SIST logo.jpeg" class="dash-logo" alt="Sathyabama Logo">
+  </div>
+
+  <div class="header-center">
+    <h1 class="page-title">OD MANAGEMENT DASHBOARD</h1>
+  </div>
+
+  <div class="header-right">
+    <span class="logged-user">Logged in as: Ravi Kumar</span>
+    <button class="logout-btn" onclick="window.location.href='index.html'">Sign Out</button>
+  </div>
+</div>
+
+</div>
+  <div class="filters">
+  <div class="table-wrapper"></div>
+    <select id="filterYear">
+      <option value="">Filter by Year</option>
+      <option value="1st">1st Year</option>
+      <option value="2nd">2nd Year</option>
+      <option value="3rd">3rd Year</option>
+      <option value="4th">4th Year</option>
+    </select>
+    <select id="filterProgram">
+      <option value="">Filter by Program</option>
+      <option value="B.E CSE">B.E CSE</option>
+      <option value="B.E CSE AIML">B.E CSE AIML</option>
+      <option value="B.E CSE AI">B.E CSE AI</option>
+      <option value="B.E CSE AIR">B.E CSE AIR</option>
+      <option value="B.E CSE DS">B.E CSE DS</option>
+      <option value="B.E CSE IoT">B.E CSE IoT</option>
+      <option value="B.E CSBS">B.E CSBS</option>
+      <option value="B.Tech IT">B.Tech IT</option>
+      <option value="B.Tech AIDS">B.Tech AIDS</option>
+      <option value="M.E CSE">M.E CSE</option>
+    
+    </select>
+    <select id="filterSection">
+      <option value="">Filter by Section</option>
+      <option value="A1">A1</option>
+      <option value="A2">A2</option>
+      <option value="A3">A3</option>
+      <option value="A4">A4</option>
+      <option value="A5">A5</option>
+      <option value="B1">B1</option>
+      <option value="B2">B2</option>
+      <option value="B3">B3</option>
+      <option value="B4">B4</option>
+      <option value="B5">B5</option>
+      <option value="C1">C1</option>
+      <option value="C2">C2</option>
+     
+    </select>
+    <button class="login-btn" id="downloadSectionPDF">Download OD List PDF</button>
+  </div>
+
+  <div class="table-wrapper">
+    <table class="od-table">
+      <thead>
+        <tr>
+          <th>Register No</th>
+          <th>Student Name</th>
+          <th>Program</th>
+          <th>Section</th>
+          <th>Reason / Subject</th>
+          <th>Date & Time</th>
+          <th>Class Coord</th>
+          <th>Year Coord</th>
+          <th>HOD</th>
+          <th>Final Status</th>
+        </tr>
+      </thead>
+      <tbody id="odTableBody">
+        <!-- Dynamic content -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
