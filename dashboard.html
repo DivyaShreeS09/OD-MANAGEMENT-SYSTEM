@@ -18,8 +18,9 @@
   </div>
 
   <div class="header-right">
-    <span class="logged-user">Logged in as: Ravi Kumar</span>
-    <button class="logout-btn" onclick="window.location.href='index.html'">Sign Out</button>
+    <span id="loggedUser"></span>
+    <span class="logged_user">Logged in as: Ravi Kumar</span>
+    <button class="logout_btn" onclick="window.location.href='index.html'">Sign Out</button>
   </div>
 </div>
 
@@ -63,7 +64,7 @@
       <option value="C2">C2</option>
      
     </select>
-    <button class="login-btn" id="downloadSectionPDF">Download OD List PDF</button>
+    <button class="login_btn" id="downloadSectionPDF">Download OD List PDF</button>
   </div>
 
   <div class="table-wrapper">
@@ -87,6 +88,15 @@
       </tbody>
     </table>
   </div>
+
+  const role = localStorage.getItem("role");
+if (!role) window.location.href = "index.html";
+
+if (window.location.pathname.includes("dashboard") && role === "student") {
+  alert("Access denied");
+  window.location.href = "index.html";
+}
+
 
   <script src="scripts.js"></script>
 </body>

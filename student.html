@@ -17,7 +17,8 @@
   </div>
 
   <div class="header-right">
-    <span class="logged-user">Logged in as: Anjali </span>
+  <span id="loggedUser"></span>
+    <span class="logged_user">Logged in as: Anjali </span>
     <button class="logout-btn" onclick="window.location.href='index.html'">Sign Out</button>
   </div>
 </div>
@@ -30,13 +31,35 @@
       <input type="text" id="program" placeholder="Enter your Program (e.g. B.E CSE AIML)" required>
       <input type="text" id="section" placeholder="Enter your Section (e.g. A1)" required>
       <input type="text" id="reason" placeholder="Reason / Event Details" required>
-      <input type="date" id="fromDate" required>
-      <input type="date" id="toDate" required>
-      <input type="time" id="startTime" required>
-      <input type="time" id="endTime" required>
+       <!-- Date Range -->
+<div class="dt-grid">
+  <div class="dt-field">
+    <label class="dt-label" for="fromDate">From Date</label>
+    <input type="date" id="fromDate" required>
+  </div>
+
+  <div class="dt-field">
+    <label class="dt-label" for="toDate">To Date</label>
+    <input type="date" id="toDate" required>
+  </div>
+</div>
+
+<!-- Time Range -->
+<div class="dt-grid">
+  <div class="dt-field">
+    <label class="dt-label" for="startTime">Start Time</label>
+    <input type="time" id="startTime" required>
+  </div>
+
+  <div class="dt-field">
+    <label class="dt-label" for="endTime">End Time</label>
+    <input type="time" id="endTime" required>
+  </div>
+</div>
       <button type="submit" class="login-btn">Request OD</button>
     </form>
   </div>
+  <h2 style="text-align:center;margin-top:40px;">Your OD Request History</h2>
 
   <div class="table-wrapper">
     <table class="od-table">
@@ -53,6 +76,9 @@
       </tbody>
     </table>
   </div>
+
+
+
 
   <script src="scripts.js"></script>
 </body>

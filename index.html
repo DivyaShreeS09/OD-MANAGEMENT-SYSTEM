@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OD Management System - Login</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="login-body">
   <div class="login-overlay">
     <div class="login-box">
-      <img src="assets/SIST logo.jpeg" alt="Sathyabama Logo" class="login-logo" style="width:320px;height:auto;" alt="Sathyabama Logo">
+      <img src="assets/SIST logo.jpeg" alt="Sathyabama Logo" class="login-logo" style="width:320px;height:auto;"
+        alt="Sathyabama Logo">
       <h1 class="login-title">OD Management System</h1>
 
       <form id="loginForm">
@@ -29,11 +32,13 @@
           <input type="password" id="password" required placeholder="Enter password">
           <span id="togglePassword">👁️</span>
         </div>
-
-        <button type="submit" class="login-btn">Sign In</button>
-      </form>
+        <form id="loginForm">
+          <button type="submit" class="login-btn">Sign In</button>
+          <p id="loginStatus" style="margin-top:10px;color:#fff;font-size:13px;"></p>
+        </form>
     </div>
   </div>
-  <script src="scripts.js"></script>
+  <script src="scripts.js" defer></script>
 </body>
+
 </html>
